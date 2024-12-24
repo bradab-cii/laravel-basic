@@ -38,6 +38,6 @@ Route::get('/post/{id}', [PostController::class, 'edit'])->name('posts.edit');
 Route::resource('posts', PostController::class)->only(['index', 'edit']);
 
 
-
 ## Using Method "POST" ##
-Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::get('/login', [LoginController::class, 'index'])->name('login.view');
+Route::post('/login', [LoginController::class, 'store'])->name('login.store');
