@@ -1,5 +1,5 @@
-Crushjs
-Always improve your coding ❤️
-YT: https://www.youtube.com/@crushjs
-TIK: https://www.tiktok.com/@crushjs.dev
+Crushjs<br>
+Always improve your coding ❤️<br>
+YT: https://www.youtube.com/@crushjs<br>
+TIK: https://www.tiktok.com/@crushjs.dev<br>
 Thanks GPT ❤️
