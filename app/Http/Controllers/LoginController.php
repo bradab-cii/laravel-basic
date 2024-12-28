@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class LoginController extends Controller
@@ -21,13 +22,16 @@ class LoginController extends Controller
             'password' => ['required', 'min:8', 'string'],
         ]);
 
-        // storing email and password to database
-        // calling model user and store it to database
-        // $email = $request->email;
-        // $password = $request->password;
-        // $email = $validated['email'];
-        // $password = $validated['password'];
-        // dd($email, $password);
+        // checking user and password for login process
+        $isLoggedIn = Auth::attempt([
+            'email' => $validated['email'],
+            'password' => $validated['password'],
+        ]);
+        if (!$isLoggedIn) {
+            return back()->withErrors([
+                'email' => 'The provided credentials are incorrect.',
+            ]);
+        }
 
         // redirect to home page
         return redirect()->route('home');

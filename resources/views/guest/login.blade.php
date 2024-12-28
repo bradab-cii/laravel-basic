@@ -14,7 +14,8 @@
    <input type="password" name="password" id="password" class="w-full rounded border p-2" autocomplete="new-password">
    <div class="block text-sm text-red-500">{{ $errors->first('password') }}</div>
   </div>
-  <div>
+  <div class="flex items-center justify-between">
+   <a href="{{ route('register.view') }}" class="text-red-500 hover:underline">Register</a>
    <button type="submit" class="rounded border bg-blue-500 p-2 text-white">Save</button>
   </div>
  </form>
